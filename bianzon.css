@@ -1,0 +1,187 @@
+/* main body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* layout */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Side */
+.sidebar {
+    width: 240px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: 3px solid #1a252f;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.filter-group {
+    background-color: #34495e;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.filter-group h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.filter-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.filter-group button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-group button:hover {
+    background-color: #2980b9;
+}
+
+/* Main content */
+.content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    background-image: url(https://i.pinimg.com/736x/21/39/8c/21398c64b1dc83f42d932e5c8e396088.jpg);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    background-color: white;
+
+}
+
+#addBtn {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#addBtn:hover {
+    background-color: #2980b9;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #3498db;
+    color: white;
+}
+
+table img {
+    width: 50px;
+    height: auto;
+}
+
+/* Modal design */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.modal-content label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+.modal-actions {
+    text-align: right;
+}
+
+.modal-actions button {
+    padding: 8px 12px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.modal-actions button[type="submit"] {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.modal-actions button[type="button"] {
+    background-color: #e74c3c;
+    color: white;
+}

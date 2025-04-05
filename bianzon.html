@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="bianzon.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <h2>Filters</h2>
+
+        <div class="filter-group">
+          <h4>Sort by:</h4>
+          <button id="sortNameBtn">Name <span id="nameArrow">↓</span></button>
+          <button id="sortPriceBtn">
+            Price <span id="priceArrow">↓</span>
+          </button>
+          <button id="sortQuantityBtn">
+            Quantity <span id="quantityArrow">↓</span>
+          </button>
+          <button id="sortDateBtn">Date <span id="dateArrow">↓</span></button>
+          <button id="sortTypeBtn">Type <span id="typeArrow">↓</span></button>
+        </div>
+
+        <div class="filter-group">
+          <h4>Filter by Type:</h4>
+          <label
+            ><input type="checkbox" class="filter-type" value="Food" />
+            Food</label
+          >
+          <label
+            ><input type="checkbox" class="filter-type" value="Tools" />
+            Tools</label
+          >
+          <label
+            ><input type="checkbox" class="filter-type" value="Office" />
+            Office</label
+          >
+        </div>
+
+        <div class="filter-group">
+          <h4>Filter by Price Range:</h4>
+          <label
+            >Min Price:
+            <input type="number" id="minPrice" step="0.01" />
+          </label>
+          <label
+            >Max Price:
+            <input type="number" id="maxPrice" step="0.01" />
+          </label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Filter by Quantity Range:</h4>
+          <label
+            >Min Quantity:
+            <input type="number" id="minQuantity" />
+          </label>
+          <label
+            >Max Quantity:
+            <input type="number" id="maxQuantity" />
+          </label>
+        </div>
+      </div>
+
+      <!--Main content -->
+      <div class="content">
+        <header>
+          <h1>Inventory Management System</h1>
+          <button id="addBtn">Add Item</button>
+        </header>
+
+        <!-- Table to show inventory -->
+        <table id="inventoryTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Details</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Date</th>
+              <th>Type</th>
+              <th>Image</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Modal for Add/Edit -->
+    <div class="modal hidden" id="itemModal">
+      <div class="modal-content">
+        <h2 id="modalTitle">Add Item</h2>
+        <form id="itemForm">
+          <label
+            >Name:
+            <input type="text" id="itemName" required />
+          </label>
+          <label
+            >Details:
+            <input type="text" id="itemDetails" required />
+          </label>
+          <label
+            >Quantity:
+            <input type="number" id="itemQuantity" required />
+          </label>
+          <label
+            >Price:
+            <input type="number" step="0.01" id="itemPrice" required />
+          </label>
+          <label
+            >Date:
+            <input type="date" id="itemDate" required />
+          </label>
+          <label
+            >Type:
+            <input type="text" id="itemType" required />
+          </label>
+          <label
+            >Image URL:
+            <input type="text" id="itemImage" />
+          </label>
+          <div class="modal-actions">
+            <button type="submit">Add</button>
+            <button type="button" id="cancelBtn">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="bianzon.js"></script>
+  </body>
+</html>
